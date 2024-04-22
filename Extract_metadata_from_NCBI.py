@@ -1,4 +1,4 @@
-"""retrieve the metadata from NCBI using assembly accession"
+"""retrieve the metadata from NCBI using assembly accession"""
 import requests
 import time
 import re
