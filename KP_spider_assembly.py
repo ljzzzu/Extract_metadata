@@ -1,4 +1,4 @@
-'''爬取mcr阳性菌株宿主相关信息'''
+"""retrieve the metadata from NCBI using assembly accession"
 import requests
 import time
 import re
@@ -81,7 +81,7 @@ class Spider_KP:
         lst.append(country)
         lst.append(collection_date)
         lst.append(Organism)
-        with open(r'C:\Users\Administrator\Desktop\result.csv','a',newline="") as f:
+        with open(r'\assembly_example.csv','a',newline="") as f:
             f_writer = csv.writer(f)
             f_writer.writerow(lst)
 
@@ -102,6 +102,6 @@ class Spider_KP:
         executor_1.shutdown(wait=True)
         print("All jobs done")
 if __name__ == "__main__":
-    spider_KP = Spider_KP(r"C:\Users\Administrator\Desktop\3.csv")
+    spider_KP = Spider_KP(r"\metadata.csv")
     spider_KP.all_info()
 
